@@ -18,3 +18,7 @@ Profile:	http://themeforest.net/user/andreysokoltsov
 @import url("animate.css");
 @import url("bootstrap.min.css");
 @import url("main.css");
+
+.icon-blue {
+    color: rgb(51, 51, 255);
+}
