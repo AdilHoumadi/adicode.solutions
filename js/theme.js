@@ -125,24 +125,26 @@ $(document).ready(function () {
         var email = $(formName + ' .js-field-email').val();
         var message = $(formName + ' .js-field-message').val();
 
-        debugger;
-
         var formData = {
             name: name,
             email: email,
             message: message,
-            "g-recaptcha-response": grecaptcha.getResponse(),
-
         };
 
-        axios
-            .post("https://submit-form.com/z80NAyrpZ", formData)
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (response) {
-                console.error(response);
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6Ldapj8pAAAAAPcYs_5MbsBwD3QGt02l4UTPRWQf', {action: 'submit'}).then(function(token) {
+                axios
+                    .post("https://submit-form.com/z80NAyrpZ", formData)
+                    .then(function (response) {
+                        console.log(response);
+                    })
+                    .catch(function (response) {
+                        console.error(response);
+                    });
             });
+        });
+
+
     }
 
 });
