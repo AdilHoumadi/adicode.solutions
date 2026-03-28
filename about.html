@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | AdiCode Solutions</title>
+  <meta name="description" content="Learn about AdiCode Solutions - 10+ years of data engineering expertise." />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-hero { padding: 10rem 0 5rem; text-align: center; }
+    .page-title { font-size: 3.5rem; margin-bottom: 1rem; }
+    .page-subtitle { color: var(--text-muted); font-size: 1.25rem; max-width: 800px; margin: 0 auto; }
+    .about-page { padding: 5rem 0; }
+    .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; }
+    .about-main h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--teal-400); }
+    .about-main p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+    .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+    .value-card { background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); }
+    .value-card h3 { color: var(--cyan-400); margin-bottom: 0.5rem; }
+    .about-sidebar .stats-card, .about-sidebar .contact-card { background: var(--bg-card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-bottom: 2rem; }
+    .stat-item { padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
+    .stat-item:last-child { border-bottom: none; }
+    .stat-value { display: block; font-size: 2rem; font-weight: bold; color: var(--teal-400); }
+    .stat-label { color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .page-title { font-size: 2.5rem; }
+      .page-hero { padding: 8rem 0 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-gradient-overlay"></div>
+  <div class="ambient-light ambient-1"></div>
+  <div class="ambient-light ambient-2"></div>
+  <div class="ambient-light ambient-3"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span class="logo-icon">&#60;/&#62;</span><span class="logo-text">AdiCode</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="expertise.html" class="nav-link">Expertise</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">Who We Are</span>
+      <h1 class="page-title">About <span class="gradient-text">AdiCode</span></h1>
+      <p class="page-subtitle">Solutions in Every Line of Code — Where data innovation and engineering excellence converge.</p>
+    </div>
+  </section>
+
+  <section class="about-page">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-main">
+          <h2>Our Story</h2>
+          <p>Welcome to <strong>AdiCode Solutions</strong>, where data innovation and engineering excellence converge. With over a decade of expertise in Back-end Development, Cloud Infrastructure, and Web Development, we specialize in turning complex data challenges into elegant, scalable solutions.</p>
+          <p>We're passionate about collaborating with individuals and teams who share our commitment to building something extraordinary. Whether you're a startup looking to establish your data infrastructure or an enterprise seeking to modernize your systems, we're here to guide you every step of the way.</p>
+          <p>Our approach combines technical excellence with a deep understanding of business needs. We don't just write code – we craft solutions that drive innovation, efficiency, and growth for your organization.</p>
+          
+          <h2 style="margin-top: 3rem;">Our Values</h2>
+          <div class="values-grid">
+            <div class="value-card">
+              <h3>Excellence</h3>
+              <p>Enterprise-grade solutions with meticulous attention to quality.</p>
+            </div>
+            <div class="value-card">
+              <h3>Innovation</h3>
+              <p>Cutting-edge technology to bring effective solutions.</p>
+            </div>
+            <div class="value-card">
+              <h3>Partnership</h3>
+              <p>Trusted partners invested in your success.</p>
+            </div>
+            <div class="value-card">
+              <h3>Transparency</h3>
+              <p>Clear communication throughout every project.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-sidebar">
+          <div class="stats-card">
+            <div class="stat-item"><span class="stat-value">10+</span><span class="stat-label">Years Experience</span></div>
+            <div class="stat-item"><span class="stat-value">50+</span><span class="stat-label">Projects Delivered</span></div>
+            <div class="stat-item"><span class="stat-value">100%</span><span class="stat-label">Client Satisfaction</span></div>
+          </div>
+          <div class="contact-card">
+            <h3 style="color:var(--teal-400); margin-bottom:1rem;">Get In Touch</h3>
+            <p style="margin-bottom:0.5rem;">adicodesolutions@gmail.com</p>
+            <p style="margin-bottom:1.5rem; color:var(--text-muted);">Sector 4, 205D Drumul Binelui Street<br>Floor 1, Room 5<br>Bucuresti - 010011, Romania</p>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">&#60;/&#62;</span><span class="logo-text">AdiCode Solutions</span></a><p style="color:var(--text-muted); margin-top:1rem;">Solutions in Every Line of Code</p></div>
+        <div class="footer-links" style="display:flex; flex-direction:row; gap:2rem;"><a href="services.html">Services</a><a href="expertise.html">Expertise</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 AdiCode Solutions. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

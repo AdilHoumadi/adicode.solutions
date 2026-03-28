@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | AdiCode Solutions</title>
+  <meta name="description" content="Data Platform Engineering, Cloud Infrastructure, Web Development, and Technical Consultation services." />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-hero { padding: 10rem 0 5rem; text-align: center; }
+    .page-title { font-size: 3.5rem; margin-bottom: 1rem; }
+    .page-subtitle { color: var(--text-muted); font-size: 1.25rem; max-width: 800px; margin: 0 auto; }
+    .service-detail { margin-bottom: 6rem; padding: 3rem; background: var(--bg-card); border-radius: 1rem; border: 1px solid var(--border-color); }
+    .service-detail-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; }
+    .service-icon-large { width: 80px; height: 80px; background: rgba(20, 184, 166, 0.1); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: var(--teal-400); }
+    .service-number-badge { font-family: monospace; color: var(--cyan-400); font-size: 1.25rem; font-weight: bold; }
+    .service-detail h2 { font-size: 2.5rem; }
+    .service-detail-desc { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; }
+    .service-highlights { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .highlight-tag { padding: 0.5rem 1rem; background: rgba(34, 211, 238, 0.1); color: var(--cyan-400); border-radius: 2rem; font-size: 0.875rem; border: 1px solid rgba(34, 211, 238, 0.2); }
+    .service-detail-features { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .service-detail-features li { display: flex; align-items: center; gap: 0.75rem; color: var(--text-main); }
+    .service-detail-features li svg { color: var(--teal-400); }
+
+    @media (max-width: 768px) {
+      .service-detail { padding: 2rem; }
+      .service-detail-header { flex-direction: column; align-items: flex-start; }
+      .service-detail-features { grid-template-columns: 1fr; }
+      .page-title { font-size: 2.5rem; }
+      .page-hero { padding: 8rem 0 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-gradient-overlay"></div>
+  <div class="ambient-light ambient-1"></div>
+  <div class="ambient-light ambient-2"></div>
+  <div class="ambient-light ambient-3"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span class="logo-icon">&#60;/&#62;</span><span class="logo-text">AdiCode</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="expertise.html" class="nav-link">Expertise</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">What We Do</span>
+      <h1 class="page-title">Our <span class="gradient-text">Services</span></h1>
+      <p class="page-subtitle">Service excellence is the cornerstone of AdiCode Solutions. With an impressive track record spanning over a decade, we proudly stand as your trusted partner on the path to success.</p>
+    </div>
+  </section>
+
+  <section class="services-page">
+    <div class="container">
+      <!-- Data Platform Engineering -->
+      <article class="service-detail" id="data-platform">
+        <div class="service-detail-header">
+          <div class="service-icon-large">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+            </svg>
+          </div>
+          <div>
+            <span class="service-number-badge">01</span>
+            <h2>Data Platform Engineering</h2>
+          </div>
+        </div>
+        <p class="service-detail-desc">Unleash the full potential of your data with our Data Platform Engineering expertise. We specialize in designing and implementing cutting-edge data solutions that drive innovation and efficiency.</p>
+        <div class="service-highlights">
+          <span class="highlight-tag">Kafka</span>
+          <span class="highlight-tag">Spark</span>
+          <span class="highlight-tag">Delta Lake</span>
+          <span class="highlight-tag">Databricks</span>
+        </div>
+        <ul class="service-detail-features">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Building robust, scalable data pipelines</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Optimizing data storage and retrieval</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Enabling real-time streaming analytics</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Data warehouse design & optimization</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Start a Data Project</a>
+      </article>
+
+      <!-- Cloud Infrastructure -->
+      <article class="service-detail" id="cloud">
+        <div class="service-detail-header">
+          <div class="service-icon-large">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="service-number-badge">02</span>
+            <h2>Cloud Infrastructure Solutions</h2>
+          </div>
+        </div>
+        <p class="service-detail-desc">Harness the power of the cloud with our Cloud Infrastructure Solutions. From AWS to Kubernetes, we'll help you leverage cloud technologies to scale your applications and reduce operational overhead.</p>
+        <div class="service-highlights">
+          <span class="highlight-tag">AWS</span>
+          <span class="highlight-tag">Kubernetes</span>
+          <span class="highlight-tag">Terraform</span>
+          <span class="highlight-tag">ArgoCD</span>
+        </div>
+        <ul class="service-detail-features">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>AWS & multi-cloud architecture design</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Kubernetes orchestration & Helm charts</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Infrastructure as Code</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>CI/CD pipeline automation</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Start a Cloud Project</a>
+      </article>
+      
+      <!-- Web Development -->
+      <article class="service-detail" id="web">
+        <div class="service-detail-header">
+          <div class="service-icon-large">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </div>
+          <div>
+            <span class="service-number-badge">03</span>
+            <h2>Web Development</h2>
+          </div>
+        </div>
+        <p class="service-detail-desc">Take your online presence to the next level with our Web Development services. We create user-friendly, responsive websites and web applications that captivate your audience.</p>
+        <div class="service-highlights">
+          <span class="highlight-tag">React</span>
+          <span class="highlight-tag">Next.js</span>
+          <span class="highlight-tag">Spring Boot</span>
+          <span class="highlight-tag">Node.js</span>
+        </div>
+        <ul class="service-detail-features">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>React & Next.js frontend applications</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Spring Boot backend development</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Responsive & mobile-first design</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Performance optimization</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Start a Web Project</a>
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">&#60;/&#62;</span><span class="logo-text">AdiCode Solutions</span></a><p style="color:var(--text-muted); margin-top:1rem;">Solutions in Every Line of Code</p></div>
+        <div class="footer-links" style="display:flex; flex-direction:row; gap:2rem;"><a href="services.html">Services</a><a href="expertise.html">Expertise</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 AdiCode Solutions. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

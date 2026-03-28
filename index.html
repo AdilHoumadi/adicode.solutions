@@ -1,561 +1,189 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdiCode Solutions - Solutions in Every Line of Code</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" type="text/css" href="css/master.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
-    <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Ldapj8pAAAAAPcYs_5MbsBwD3QGt02l4UTPRWQf"></script>
-
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AdiCode Solutions | Enterprise Data Engineering & Cloud Solutions</title>
+    <meta name="description"
+          content="Expert Data Engineering, Cloud Infrastructure, and Web Development solutions. 10+ years of experience delivering cutting-edge data platforms."/>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-xs-8 slideInLeft">
-                <div class="logo">
-                    <span class="point">AdiCode</span><span>Solutions</span>
-                </div>
-            </div>
-            <div class="col-md-9 hidden-sm hidden-xs slideInRight">
-                <div class="main-menu">
-                    <ul class="list-inline">
-                        <li><a href="#hello">Hello</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#expertise">Expertise</a></li>
-                        <!-- <li><a href="#experience">Experience</a></li> -->
-                        <li><a href="#contact">Contact us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-xs-4 hidden-lg hidden-md slideInRight">
-                <div class="mobile-btn">
-                    <span><i class="mdi mdi-menu" aria-hidden="true"></i></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Mobile menu -->
-<div class="mob-menu-wrapper hidden-md hidden-lg">
-    <div class="close-mob-menu">
-        <span><i class="mdi mdi-close" aria-hidden="true"></i></span>
-    </div>
-    <div class="mobile-menu">
-        <ul>
-            <li><a href="#hello">Hello</a></li>
-            <li><a href="#services">services</a></li>
-            <li><a href="#expertise">expertise</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact us</a></li>
-        </ul>
-    </div>
+<div id="canvas-container">
+    <canvas id="bg-canvas"></canvas>
 </div>
-<!-- Mobile menu -->
+<div class="bg-gradient-overlay"></div>
+<div class="ambient-light ambient-1"></div>
+<div class="ambient-light ambient-2"></div>
+<div class="ambient-light ambient-3"></div>
 
-<section id="hello" class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 about-img-wrap">
-                <div class="about-img wow slideInRight">
-                    <img src="media/image.jpg" alt="" class="img-responsive">
-                </div>
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo"><span class="logo-icon">&#60;/&#62;</span><span
+                class="logo-text">AdiCode</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="expertise.html" class="nav-link">Expertise</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="mobile-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="container hero-grid">
+        <div class="hero-content">
+            <div class="hero-badge"><span class="badge-dot"></span>Available for new projects</div>
+            <h1 class="hero-title">Empowering Your <span class="gradient-text">Data Journey</span></h1>
+            <p class="hero-subtitle">
+                Welcome to <strong>AdiCode Solutions</strong>, where data innovation and engineering excellence
+                converge.
+                With over a decade of expertise in Back-end Development, Cloud Infrastructure, and Web Development, we
+                specialize in
+                Data Engineering, delivering enterprise-grade solutions for complex data challenges.
+            </p>
+            <div class="hero-cta">
+                <a href="contact.html" class="btn btn-primary"><span>Start Your Project</span></a>
+                <a href="services.html" class="btn btn-secondary"><span>Explore Services</span></a>
             </div>
-            <div class="col-md-6">
-                <div class="about-me wow slideInLeft">
-                    <div class="about-me-title">
-                        <h1><span class="point">AdiCode</span><span>Solutions</span></h1>
-                        <br />
-                        <h4><span>Empowering Your Data Journey</span></h4>
-                        <br />
-                    </div>
-                    <div class="about-me-text">
-                        <div class="opacity-box">
-                            <p>Welcome to AdiCode Solutions, led by Adil, where data innovation and engineering excellence converge.
-                                With a decade of expertise in Back-end Development, Cloud Infrastructure, and Web Development,
-                                we specialize in Data Engineering, offering top-notch solutions for complex data challenges.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="about-me-info">
-                        <p>
-                            <span class="span-title">Email</span>
-                            <span>adicodesolutions@gmail.com</span>
-                        </p>
-                        <p>
-                            <span class="span-title">Address</span>
-                            <span>Sector 4, 205D Drumul Binelui Street Floor 1, Room 5 <br >Bucuresti - 010011 Romania</span>
-                        </p>
-                    </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">10+</span><span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat"><span class="stat-number">50+</span><span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat"><span class="stat-number">100%</span><span
+                        class="stat-label">Client Satisfaction</span></div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="window-header">
+                    <div class="window-dots"><span class="dot red"></span><span class="dot yellow"></span><span
+                            class="dot green"></span></div>
+                    <span class="window-title">data_pipeline.ts</span>
+                </div>
+                <div class="code-content"><pre><code><span class="keyword">const</span> buildPipeline = <span
+                        class="keyword">async</span> () =&gt; {
+  <span class="keyword">const</span> dataStream = <span class="keyword">await</span> <span
+                            class="function">streamData</span>({
+    source: <span class="string">'kafka-broker'</span>,
+    transform: <span class="string">'apache-spark'</span>,
+    destination: <span class="string">'delta-lake'</span>
+  });
+  
+  <span class="keyword">return</span> <span class="function">deployInfrastructure</span>({
+    cloud: <span class="string">'aws'</span>,
+    orchestration: <span class="string">'kubernetes'</span>,
+    scaling: <span class="string">'auto'</span>,
+    resilience: <span class="keyword">true</span>
+  });
+};</code></pre>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="services" class="section">
+<!-- Quick Services Preview -->
+<section class="home-services">
     <div class="container">
-        <div class="row wave-bg">
-            <div class="zigzag wow slideInLeft">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
-                     y="0px" viewBox="0 0 105 20" xml:space="preserve">
-                    <g>
-                        <rect class="st0" width="105" height="20"/>
-                        <g>
-                            <polyline class="st1"
-                                      points="2.5,5 16.8,15 31.1,5 45.3,15 59.6,5 73.9,15 88.2,5 102.5,15   "/>
-                        </g>
-                    </g>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
-                     y="0px" viewBox="0 0 105 20" xml:space="preserve">
-                    <g>
-                        <rect class="st0" width="105" height="20"/>
-                        <g>
-                            <polyline class="st1"
-                                      points="2.5,5 16.8,15 31.1,5 45.3,15 59.6,5 73.9,15 88.2,5 102.5,15   "/>
-                        </g>
-                    </g>
-                </svg>
-            </div>
-            <div class="col-md-4 wow slideInLeft">
-                <div class="section-sidebar">
-                    <h2><span class="point">Services</span></h2>
-                    <div class="opacity-box">
-                        <p>Service excellence is the cornerstone of AdiCode Solutions. With an impressive track record spanning over a decade in Data Platform Engineering, Cloud Infrastructure Solutions, Web Development, and Technical Consultation, we proudly stand as your trusted partner on the path to success.</p>
-                        <br />
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-6 wow zoomIn">
-                        <div class="advantages-box">
-                            <h4><i class="fas fa-database icon-blue"></i> Data Platform Engineering</h4>
-                            <div class="opacity-box">
-                                <p>Unleash the full potential of your data with our Data Platform Engineering expertise. We specialize in designing and implementing cutting-edge data solutions that drive innovation and efficiency. Whether it's building data pipelines, optimizing data storage, or enabling real-time analytics, we've got you covered.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow zoomIn">
-                        <hr class="mobile-hr">
-                        <div class="advantages-box">
-                            <h4><i class="fas fa-cloud icon-blue"></i> Cloud Infrastructure Solutions</h4>
-                            <div class="opacity-box">
-                                <p>Harness the power of the cloud with our Cloud Infrastructure Solutions. From AWS to Kubernetes, we'll help you leverage cloud technologies to scale your applications, improve resilience, and reduce operational overhead. Our experts ensure your infrastructure is agile, cost-effective, and ready to support your business goals.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 wow zoomIn">
-                        <hr>
-                        <div class="advantages-box">
-                            <h4><i class="fas fa-laptop-code icon-blue"></i> Web Development</h4>
-                            <div class="opacity-box">
-                                <p>Take your online presence to the next level with our Web Development services. We create user-friendly, responsive websites and web applications that captivate your audience. Our expertise spans a wide range of technologies, including HTML/CSS, JavaScript, ReactJS, and more, ensuring your digital footprint is strong and dynamic.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow zoomIn">
-                        <hr>
-                        <div class="advantages-box">
-                            <h4><i class="fas fa-lightbulb icon-blue"></i> Technical Consultation</h4>
-                            <div class="opacity-box">
-                                <p>Tap into our technical expertise with our Technical Consultation services. Whether you need guidance on data strategy, architectural reviews, or technology adoption, we provide insightful advice and recommendations. We're committed to empowering your team with the knowledge and best practices needed for success.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="section-header">
+            <span class="section-tag">What We Do</span>
+            <h2 class="section-title">Our Core Services</h2>
+            <p class="section-subtitle">Enterprise-grade solutions tailored to your unique business needs.</p>
         </div>
-        <div class="text-center">
-            <br /><!-- Center align the button -->
-            <div class="about-btns">
-                <a data-toggle="modal" data-target="#contact-modal" href="#" class="site-btn">Contact us</a>
-            </div>
+        <div class="services-grid">
+            <a href="services.html#data-platform" style="text-decoration:none; color:inherit;" class="service-card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+                    </svg>
+                </div>
+                <h3>Data Platform Engineering</h3>
+                <p>Building cutting-edge data pipelines and real-time analytics solutions.</p>
+                <span class="learn-more">Learn more →</span>
+            </a>
+            <a href="services.html#cloud" style="text-decoration:none; color:inherit;" class="service-card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                    </svg>
+                </div>
+                <h3>Cloud Infrastructure</h3>
+                <p>Scalable AWS & Kubernetes solutions for modern enterprises.</p>
+                <span class="learn-more">Learn more →</span>
+            </a>
+            <a href="services.html#web" style="text-decoration:none; color:inherit;" class="service-card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                    </svg>
+                </div>
+                <h3>Web Development</h3>
+                <p>Modern, responsive applications with React and Spring Boot.</p>
+                <span class="learn-more">Learn more →</span>
+            </a>
+        </div>
+        <div style="text-align:center; margin-top:3rem;">
+            <a href="services.html" class="btn btn-secondary">View All Services</a>
         </div>
     </div>
 </section>
 
-<section id="expertise" class="section">
+<!-- Tech Stack -->
+<section class="home-tech" style="background: rgba(3,7,18,0.5);">
     <div class="container">
-        <div class="row wave-bg">
-            <div class="zigzag wow slideInLeft">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
-                     y="0px" viewBox="0 0 105 20" xml:space="preserve">
-                    <g>
-                        <rect class="st0" width="105" height="20"/>
-                        <g>
-                            <polyline class="st1"
-                                      points="2.5,5 16.8,15 31.1,5 45.3,15 59.6,5 73.9,15 88.2,5 102.5,15   "/>
-                        </g>
-                    </g>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
-                     y="0px" viewBox="0 0 105 20" xml:space="preserve">
-                    <g>
-                        <rect class="st0" width="105" height="20"/>
-                        <g>
-                            <polyline class="st1"
-                                      points="2.5,5 16.8,15 31.1,5 45.3,15 59.6,5 73.9,15 88.2,5 102.5,15   "/>
-                        </g>
-                    </g>
-                </svg>
-            </div>
-            <div class="col-md-4 wow slideInLeft">
-                <div class="section-sidebar">
-                    <h2><span class="point">Expertise</span></h2>
-                    <div class="opacity-box">
-                        <p>We are inspired by collaborating with individuals who are as passionate as we are about building something awesome.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-6 wow zoomIn">
-                        <div class="advantages-box">
-                            <h4><i class="fas fa-code"></i> Programming</h4>
-                            <div class="opacity-box">
-                                <p>Java, Golang, Microservices, Unix/Linux, Bash, C, Perl, Node.JS, Python.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow zoomIn">
-                        <hr class="mobile-hr">
-                        <div class="advantages-box">
-                            <h4><i class="fas fa-laptop-code"></i> Web Development</h4>
-                            <div class="opacity-box">
-                                <p>Spring Boot, HTML/CSS, JavaScript ES6, ReactJS, Redux, Cypress.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 wow zoomIn">
-                        <hr>
-                        <div class="advantages-box">
-                            <h4><i class="fas fa-database"></i> Storage / Databases</h4>
-                            <div class="opacity-box">
-                                <p>MySQL, PostgreSQL, MongoDB, Kafka, Redis, RocksDB, ElasticSearch, Oracle, SQL Server, Cassandra, Couchbase</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow zoomIn">
-                        <hr>
-                        <div class="advantages-box">
-                            <h4><i class="fas fa-cloud"></i> Infrastructure / Cloud</h4>
-                            <div class="opacity-box">
-                                <p>Ubuntu, Kubernetes, Helm, Docker, Golang scripting, Terraform, Terragrunt, ArgoCD, Tekton, EC2, ECS, EKS, MSK, Fargate, Route53, S3, CloudFront, SQS , RDS, IAM, VPC, ALB.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="section-header" style="text-align:center; max-width: 600px; margin: 0 auto 3rem;">
+            <span class="section-tag">Technologies</span>
+            <h2 class="section-title">Our Tech Stack</h2>
+            <p class="section-subtitle" style="margin: 0 auto;">Mastery across the full technology spectrum.</p>
+        </div>
+        <div class="tech-showcase" style="justify-content:center; max-width: 800px; margin: 0 auto;">
+            <span class="tech-pill featured">Apache Kafka</span>
+            <span class="tech-pill featured">Kubernetes</span>
+            <span class="tech-pill featured">AWS</span>
+            <span class="tech-pill featured">Apache Spark</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Terraform</span>
+            <span class="tech-pill featured">Java</span>
+            <span class="tech-pill featured">Scala</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill featured">React</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">MongoDB</span>
+            <span class="tech-pill">Spring Boot</span>
+            <span class="tech-pill">ArgoCD</span>
         </div>
     </div>
 </section>
 
-<!-- 
-<section id="experience" class="section">
+<!-- Footer -->
+<footer class="footer">
     <div class="container">
-        <div class="row wave-bg">
-            <div class="zigzag wow slideInLeft">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
-                     y="0px" viewBox="0 0 105 20" xml:space="preserve">
-                    <g>
-                       <rect class="st0" width="105" height="20"/>
-                        <g>
-                            <polyline class="st1"
-                                      points="2.5,5 16.8,15 31.1,5 45.3,15 59.6,5 73.9,15 88.2,5 102.5,15   "/>
-                        </g>
-                    </g>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
-                     y="0px" viewBox="0 0 105 20" xml:space="preserve">
-                    <g>
-                        <rect class="st0" width="105" height="20"/>
-                        <g>
-                            <polyline class="st1"
-                                      points="2.5,5 16.8,15 31.1,5 45.3,15 59.6,5 73.9,15 88.2,5 102.5,15   "/>
-                        </g>
-                    </g>
-                </svg>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><span class="logo-icon">&#60;/&#62;</span><span class="logo-text">AdiCode Solutions</span></a>
+                <p style="color:var(--text-muted); margin-top:1rem;">Solutions in Every Line of Code</p>
             </div>
-            <div class="col-md-4 wow slideInLeft">
-                <div class="section-sidebar">
-                    <h2><span class="point">Experience</span></h2>
-                    <div class="opacity-box">
-                        <p>We have collaborated with prominent organizations, including KOR Financial, Brussels Airport Company, Adidas AG, Hireme SA, and Taktik SA, to develop digital products that address complex challenges and establish enduring connections with millions of individuals every day.</p>
-                    </div>
-                </div>
+            <div class="footer-links" style="display:flex; flex-direction:row; gap:2rem;">
+                <a href="services.html">Services</a>
+                <a href="expertise.html">Expertise</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </div>
-            <div class="col-md-8 right-box">
-                <div class="row wow zoomIn">
-                    <div class="col-md-12">
-                        <div class="about-row">
-                            <h4 class="about-tittle">KOR Financial, USA
-                            </h4>
-                            <p class="about-info">Software Engineer</p>
-                            <p>Jan. 2023 — Present</p>
-                            <div class="opacity-box">
-                                <p>Implemented API Microservices: Developed a series of API microservices to enhance the functionality and efficiency of our financial systems, leveraging technologies such as Kafka, Elasticsearch, and Spring Boot.</p>
-                                <p>Containerized Deployment: Led the effort to containerize our services using Docker containers, enhancing the portability and scalability of our applications.</p>
-                                <p>Leveraged AWS Services: Utilized a variety of AWS services to build and deploy our service infrastructure, including EC2, ECS, Fargate, Route53, S3, CloudFront, SQS, RDS, IAM, VPC, and ALB. This approach focused on achieving high availability, fault tolerance, and auto-scaling.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="row wow zoomIn">
-                    <div class="col-md-12">
-                        <div class="about-row">
-                            <h4 class="about-tittle">Brussels Airport Company, Brussels, Belgium
-                            </h4>
-                            <p class="about-info">Data Platform Engineer</p>
-                            <p>Jan. 2022 — Dec 2022</p>
-                            <div class="opacity-box">
-                                <p>Drive proof-of-concepts and implement data platform solutions in highly scalable and resilient environments.</p>
-                                <p>Review and contribute to the design of solutions.</p>
-                                <p>Lead the implementation of data platforms hands-on.</p>
-                                <p>Provide best practices and mentorship to team members and developers.</p>
-                                <p>Share knowledge and facilitate upskilling of team members in the data and analytics platform.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="row wow zoomIn">
-                    <div class="col-md-12">
-                        <div class="about-row">
-                            <h4 class="about-tittle">Adidas AG, Herzogenaurach, Germany</h4>
-                            <p class="about-info">Data Platform Engineer</p>
-                            <p>Jan. 2019 — Dec. 2021</p>
-                            <div class="opacity-box">
-                                <p>
-                                    <p>Enabled streaming technologies for non-tech users to interact with their data via ksqlDB technology.</p>
-                                    <p>Implemented Kong API Gateway on top of ksqlDB clusters.</p>
-                                    <p>Established a GitOps model for managing Kubernetes deployments using Helm charts, Jenkins builds, and Bitbucket.</p>
-                                    <p>Provided observability for clusters through Prometheus and Grafana dashboards.</p>
-                                    <p>Enabled data transfer from different technologies and protocols (such as JMS and SAP) to Kafka topics via Kafka Connect connectors.</p>
-                                    <p>Deployed and maintained Kafka Streaming Platform components, including Kafka brokers, Zookeeper, Rest Proxy, MirrorMaker, Schema Registry, and Kafka Connect.</p>
-                                    <p>Monitored and scaled the performance of Kafka clusters using tools like Prometheus, Grafana, CloudWatch, and internal logs.</p>
-                                    <p>Developed, built, and deployed Kafka Connect plugins to extend the core functionality of the Kafka Connect framework.</p>
-                                    <p>Reviewed architecture of other teams to assist in implementing streaming solutions in their projects.</p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="row wow zoomIn">
-                    <div class="col-md-12">
-                        <div class="about-row">
-                            <h4 class="about-tittle">HIREME SA, Brussels, Belgium</h4>
-                            <p class="about-info">Software Engineer</p>
-                            <p>Nov, 2015 — Nov, 2019</p>
-                            <div class="opacity-box">
-                                    <p>Implemented RESTful API for a vendor management system application using Event Sourcing and CQRS design patterns.</p>
-                                    <p>Set up a PubSub architecture for task consumption from the RESTful API.</p>
-                                    <p>Built and deployed a service infrastructure using Docker containers, Drone.io, and various AWS services, focusing on high availability, fault tolerance, and auto-scaling.</p>
-                                    <p>Monitored the scalability and performance of the API using Grafana, CloudWatch, and Elasticsearch.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
---> 
-    
-<section id="contact" class="section">
-    <div class="container">
-        <div class="row wave-bg">
-            <div class="zigzag wow slideInLeft">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
-                     y="0px" viewBox="0 0 105 20" xml:space="preserve">
-                    <g>
-                        <rect class="st0" width="105" height="20"/>
-                        <g>
-                            <polyline class="st1"
-                                      points="2.5,5 16.8,15 31.1,5 45.3,15 59.6,5 73.9,15 88.2,5 102.5,15   "/>
-                        </g>
-                    </g>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
-                     y="0px" viewBox="0 0 105 20" xml:space="preserve">
-                    <g>
-                        <rect class="st0" width="105" height="20"/>
-                        <g>
-                            <polyline class="st1"
-                                      points="2.5,5 16.8,15 31.1,5 45.3,15 59.6,5 73.9,15 88.2,5 102.5,15   "/>
-                        </g>
-                    </g>
-                </svg>
-            </div>
-            <div class="col-md-4 wow slideInLeft">
-                <div class="section-sidebar">
-                    <h2><span class="point">Contact</span></h2>
-                    <div class="about-me-info">
-                        <br />
-                        <p>
-                            <span class="span-title">Email</span>
-                            <span>adicodesolutions@gmail.com</span>
-                        </p>
-                        <p>
-                            <span class="span-title">Address</span>
-                            <span>Sector 4, 205D Drumul Binelui Street <br />
-                                Floor 1, Room 5 <br >Bucuresti - 010011 Romania</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <form action="https://submit-form.com/z80NAyrpZ" class="wow slideInRight js-footer-form">
-                <div class="opacity-box">
-                    <p>Are you working on something great? We would love to help make it happen! Drop us a message and start your project right now! Just do it.</p>
-                    <br />
-                </div>
-                <div class="form-wrapper">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <input name="name" class="form-field js-field-name" type="text" placeholder="Name" required>
-                            <span class="form-validation"></span>
-                            <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
-                        </div>
-                        <div class="form-group">
-                            <input name="email" class="form-field js-field-email" type="email" placeholder="E-mail" required>
-                            <span class="form-validation"></span>
-                            <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="form-group">
-                            <textarea name="message" class="form-field js-field-message" placeholder="Message" required></textarea>
-                            <span class="form-validation"></span>
-                        </div>
-                        <div class="submit-holder">
-                            <input class="site-btn" type="submit" value="Send message">
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
 
-<footer class="footer text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 wow zoomIn">
-                <div class="copyright">
-                    <p>Copyright - AdiCode Solutions 2023</p>
-                </div>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AdiCode Solutions. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
-<!-- Contact me modal -->
-<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="portfolio-modal">
-    <div class="modal-dialog modal-center" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-title">
-                    <h1><span class="point">Let’s work together</span></h1>
-                </div>
-                <div class="modal-description">
-                    <p>Are you working on something great? We would love to help make it happen! Drop us a message and let's kickstart your projects right now! Just do it.</p>
-                </div>
-                <div class="modal-form">
-                    <form action="https://submit-form.com/z80NAyrpZ" class="js-modal-form">
-                        <div class="row form-wrapper">
-                            <div class="col-lg-5 col-md-5">
-                                <div class="form-group">
-                                    <input name="name" class="form-field js-field-name" type="text" placeholder="Name" required />
-                                    <span class="form-validation"></span>
-                                    <span class="form-invalid-icon"><i class="mdi mdi-close"
-                                                                       aria-hidden="true"></i></span>
-                                </div>
-                                <div class="form-group">
-                                    <input name="email" class="form-field js-field-email" type="email" placeholder="E-mail" required />
-                                    <span class="form-validation"></span>
-                                    <span class="form-invalid-icon"><i class="mdi mdi-close"
-                                                                       aria-hidden="true"></i></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 col-md-7">
-                                <div class="form-group">
-                                    <textarea name="message" class="form-field js-field-message" placeholder="Message" required></textarea>
-                                    <span class="form-validation"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="submit-holder">
-                                    <input class="site-btn js-submit-contact" type="submit" value="Send message">
-                                    <a href="#" class="site-btn gray-btn" data-dismiss="modal">Back to site</a>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Contact me modal -->
-
-<!-- Thank you modal -->
-<div class="modal fade" id="thanks-modal" tabindex="-1" role="dialog" aria-labelledby="thanks-modal">
-    <div class="modal-dialog modal-center" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-title">
-                    <h1><span class="point">Your message has been sent</span></h1>
-                </div>
-                <div class="modal-description">
-                    <p>Thank you for your interest in my work. I’ll contact you just in a few
-                        days. Stay tuned and see you soon, friend!</p>
-                </div>
-                <a href="#" class="site-btn" data-dismiss="modal">Back to site</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Thank you modal -->
-
-<!-- Error message modal -->
-<div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-labelledby="error-modal">
-    <div class="modal-dialog modal-center" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-title">
-                    <h1><span class="point">Ooops!</span></h1>
-                </div>
-                <div class="modal-description">
-                    <p>Something go wrong!</p>
-                </div>
-                <a href="#" class="site-btn" data-dismiss="modal">Try again</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Error message modal -->
-
-
-<script src="js/jquery-2.2.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.placeholder.min.js"></script>
-
-<!--Mix It Up-->
-<script src="assets/mixitup-v3/dist/mixitup.min.js"></script>
-
-<!--THEME-->
-<script src="js/wow.min.js"></script>
-<script src="js/theme.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>

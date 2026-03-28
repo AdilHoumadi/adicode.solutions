@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact | AdiCode Solutions</title>
+    <meta name="description"
+          content="Get in touch with AdiCode Solutions for your data engineering and cloud infrastructure needs."/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            padding: 10rem 0 5rem;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-page {
+            padding: 5rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--teal-400);
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .contact-method:hover {
+            border-color: var(--teal-400);
+            transform: translateY(-3px);
+        }
+
+        .contact-method-icon {
+            padding: 1rem;
+            background: rgba(20, 184, 166, 0.1);
+            color: var(--teal-400);
+            border-radius: 0.75rem;
+        }
+
+        .contact-method .label {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-method .value {
+            display: block;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .contact-form-section {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .page-hero {
+                padding: 8rem 0 3rem;
+            }
+
+            .contact-form-section {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bg-gradient-overlay"></div>
+<div class="ambient-light ambient-1"></div>
+<div class="ambient-light ambient-2"></div>
+<div class="ambient-light ambient-3"></div>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo"><span class="logo-icon">&#60;/&#62;</span><span
+                class="logo-text">AdiCode</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="expertise.html" class="nav-link">Expertise</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+        <button class="mobile-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<section class="page-hero">
+    <div class="container">
+        <span class="section-tag">Get In Touch</span>
+        <h1 class="page-title">Let's <span class="gradient-text">Connect</span></h1>
+        <p class="page-subtitle">Are you working on something great? We would love to help make it happen! Drop us a
+            message and start your project right now! Just do it.</p>
+    </div>
+</section>
+
+<section class="contact-page">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info-section">
+                <h2>Contact Information</h2>
+                <p style="margin-bottom: 3rem; color: var(--text-muted); font-size: 1.1rem;">Ready to transform your
+                    data infrastructure? Let's discuss how we can help you build scalable, efficient solutions.</p>
+
+                <a href="mailto:adicodesolutions@gmail.com" class="contact-method">
+                    <div class="contact-method-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="label">Email</span>
+                        <span class="value">adicodesolutions@gmail.com</span>
+                    </div>
+                </a>
+
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2">
+                            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <circle cx="12" cy="11" r="3"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="label">Address</span>
+                        <span class="value">Sector 4, 205D Drumul Binelui Street<br>Floor 1, Room 5<br>Bucuresti - 010011, Romania</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="contact-form-section">
+                <form class="contact-form" action="https://submit-form.com/z80NAyrpZ" onsubmit="event.preventDefault(); alert('Message sent!');">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Alex Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="hello@yourcompany.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="6" required placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">&#60;/&#62;</span><span
+                    class="logo-text">AdiCode Solutions</span></a>
+                <p style="color:var(--text-muted); margin-top:1rem;">Solutions in Every Line of Code</p></div>
+            <div class="footer-links" style="display:flex; flex-direction:row; gap:2rem;"><a href="services.html">Services</a><a
+                    href="expertise.html">Expertise</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 AdiCode Solutions. All rights reserved.</p></div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

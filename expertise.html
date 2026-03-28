@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expertise | AdiCode Solutions</title>
+  <meta name="description" content="Our technical expertise spans programming languages, web development, databases, and cloud infrastructure." />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-hero { padding: 10rem 0 5rem; text-align: center; }
+    .page-title { font-size: 3.5rem; margin-bottom: 1rem; }
+    .page-subtitle { color: var(--text-muted); font-size: 1.25rem; max-width: 800px; margin: 0 auto; }
+    
+    .expertise-page { padding: 5rem 0; }
+    .expertise-grid { display: flex; flex-direction: column; gap: 4rem; }
+    
+    .expertise-category { display: flex; gap: 2rem; background: var(--bg-card); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border-color); position: relative; overflow: hidden; }
+    
+    .expertise-number { position: absolute; top: -1rem; right: -1rem; font-size: 8rem; font-weight: 800; color: rgba(255, 255, 255, 0.03); line-height: 1; pointer-events: none; }
+    
+    .expertise-icon-wrapper { flex-shrink: 0; }
+    .expertise-icon { width: 64px; height: 64px; background: rgba(34, 211, 238, 0.1); color: var(--cyan-400); border-radius: 1rem; display: flex; align-items: center; justify-content: center; }
+    
+    .expertise-content { flex: 1; position: relative; z-index: 1; }
+    .category-title { font-size: 2rem; margin-bottom: 1rem; color: var(--text-main); }
+    .category-description { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; max-width: 700px; }
+    
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .tech-tag { padding: 0.5rem 1rem; background: rgba(3, 7, 18, 0.5); border: 1px solid var(--border-color); border-radius: 2rem; color: var(--text-muted); font-size: 0.875rem; transition: all 0.3s; }
+    .tech-tag:hover { background: rgba(20, 184, 166, 0.1); border-color: rgba(20, 184, 166, 0.3); color: white; transform: translateY(-2px); }
+    .tech-tag.featured { background: rgba(20, 184, 166, 0.1); border-color: rgba(20, 184, 166, 0.3); color: var(--teal-400); font-weight: 500; }
+    .tech-tag.featured:hover { background: rgba(20, 184, 166, 0.2); color: white; }
+    
+    /* CTA */
+    .page-cta { padding: 8rem 0; text-align: center; }
+    .cta-content h2 { font-size: 3rem; margin-bottom: 1.5rem; }
+    .cta-content p { color: var(--text-muted); font-size: 1.25rem; margin-bottom: 2.5rem; }
+
+    @media (max-width: 768px) {
+      .expertise-category { flex-direction: column; padding: 2rem; }
+      .category-title { font-size: 1.5rem; }
+      .page-title { font-size: 2.5rem; }
+      .page-hero { padding: 8rem 0 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-gradient-overlay"></div>
+  <div class="ambient-light ambient-1"></div>
+  <div class="ambient-light ambient-2"></div>
+  <div class="ambient-light ambient-3"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span class="logo-icon">&#60;/&#62;</span><span class="logo-text">AdiCode</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="expertise.html" class="nav-link active">Expertise</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">Tech Stack</span>
+      <h1 class="page-title">Our <span class="gradient-text">Expertise</span></h1>
+      <p class="page-subtitle">Mastery across the full technology spectrum. We leverage cutting-edge tools and frameworks to build robust, scalable solutions that drive your business forward.</p>
+    </div>
+  </section>
+
+  <section class="expertise-page">
+    <div class="container">
+      <div class="expertise-grid">
+        
+        <!-- Programming Languages -->
+        <div class="expertise-category">
+          <div class="expertise-number">01</div>
+          <div class="expertise-icon-wrapper">
+            <div class="expertise-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="expertise-content">
+            <h3 class="category-title">Programming Languages</h3>
+            <p class="category-description">Building robust applications with modern languages and proven frameworks.</p>
+            <div class="tech-tags">
+              <span class="tech-tag featured">Java</span>
+              <span class="tech-tag featured">Scala</span>
+              <span class="tech-tag featured">Golang</span>
+              <span class="tech-tag featured">Python</span>
+              <span class="tech-tag featured">Node.JS</span>
+              <span class="tech-tag">Microservices</span>
+              <span class="tech-tag">Unix/Linux</span>
+              <span class="tech-tag">Bash</span>
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">Perl</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="expertise-category">
+          <div class="expertise-number">02</div>
+          <div class="expertise-icon-wrapper">
+            <div class="expertise-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="expertise-content">
+            <h3 class="category-title">Web Development</h3>
+            <p class="category-description">Creating modern, responsive applications with cutting-edge web technologies.</p>
+            <div class="tech-tags">
+              <span class="tech-tag featured">Spring Boot</span>
+              <span class="tech-tag featured">ReactJS</span>
+              <span class="tech-tag featured">Next.js</span>
+              <span class="tech-tag featured">JavaScript ES6</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">HTML/CSS</span>
+              <span class="tech-tag">Redux</span>
+              <span class="tech-tag">Cypress</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Storage / Databases -->
+        <div class="expertise-category">
+          <div class="expertise-number">03</div>
+          <div class="expertise-icon-wrapper">
+            <div class="expertise-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="expertise-content">
+            <h3 class="category-title">Storage & Databases</h3>
+            <p class="category-description">Managing data at scale with SQL, NoSQL, and real-time streaming solutions.</p>
+            <div class="tech-tags">
+              <span class="tech-tag featured">Apache Kafka</span>
+              <span class="tech-tag featured">PostgreSQL</span>
+              <span class="tech-tag featured">MongoDB</span>
+              <span class="tech-tag featured">Redis</span>
+              <span class="tech-tag featured">ElasticSearch</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">RocksDB</span>
+              <span class="tech-tag">Oracle</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">Cassandra</span>
+              <span class="tech-tag">Couchbase</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infrastructure / Cloud -->
+        <div class="expertise-category">
+          <div class="expertise-number">04</div>
+          <div class="expertise-icon-wrapper">
+            <div class="expertise-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="expertise-content">
+            <h3 class="category-title">Infrastructure & Cloud</h3>
+            <p class="category-description">Designing and deploying scalable cloud-native architectures with DevOps best practices.</p>
+            <div class="tech-tags">
+              <span class="tech-tag featured">AWS</span>
+              <span class="tech-tag featured">Kubernetes</span>
+              <span class="tech-tag featured">Docker</span>
+              <span class="tech-tag featured">Terraform</span>
+              <span class="tech-tag featured">ArgoCD</span>
+              <span class="tech-tag">Helm</span>
+              <span class="tech-tag">EKS</span>
+              <span class="tech-tag">MSK</span>
+              <span class="tech-tag">EC2</span>
+              <span class="tech-tag">S3</span>
+              <span class="tech-tag">Terragrunt</span>
+              <span class="tech-tag">Tekton</span>
+              <span class="tech-tag">ECS</span>
+              <span class="tech-tag">Fargate</span>
+              <span class="tech-tag">Route53</span>
+              <span class="tech-tag">CloudFront</span>
+              <span class="tech-tag">SQS</span>
+              <span class="tech-tag">RDS</span>
+              <span class="tech-tag">IAM</span>
+              <span class="tech-tag">VPC</span>
+              <span class="tech-tag">ALB</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="page-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Let's Build Something Amazing</h2>
+        <p>Ready to leverage our expertise for your next project?</p>
+        <a href="contact.html" class="btn btn-primary btn-large">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="logo-icon">&#60;/&#62;</span><span class="logo-text">AdiCode Solutions</span></a>
+          <p style="color:var(--text-muted); margin-top:1rem;">Solutions in Every Line of Code</p>
+        </div>
+        <div class="footer-links" style="display:flex; flex-direction:row; gap:2rem;">
+          <a href="services.html">Services</a>
+          <a href="expertise.html">Expertise</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 AdiCode Solutions. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
