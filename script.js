@@ -299,3 +299,65 @@ if (canvas) {
     resizeCanvas();
     animate();
 }
+
+// Contact form handling
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('submitBtn');
+        const formStatus = document.getElementById('formStatus');
+        
+        submitBtn.disabled = true;
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        formStatus.textContent = '';
+        
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData.entries());
+
+        const sendData = (payload) => {
+            fetch('https://submit-form.com/z80NAyrpZ', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (response.ok) {
+                    formStatus.textContent = 'Message sent successfully!';
+                    formStatus.style.color = '#10b981'; // Success color
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                formStatus.textContent = 'Oops! There was a problem submitting your form.';
+                formStatus.style.color = '#ef4444'; // Error color
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            });
+        };
+
+        if (typeof grecaptcha !== 'undefined') {
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6Ldapj8pAAAAAPcYs_5MbsBwD3QGt02l4UTPRWQf', {action: 'submit'}).then(function(token) {
+                    data['g-recaptcha-response'] = token;
+                    sendData(data);
+                }).catch(function(err) {
+                    console.error('reCAPTCHA error:', err);
+                    sendData(data);
+                });
+            });
+        } else {
+            sendData(data);
+        }
+    });
+}
