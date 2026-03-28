@@ -317,47 +317,39 @@ if (contactForm) {
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData.entries());
 
-        const sendData = (payload) => {
-            fetch('https://submit-form.com/z80NAyrpZ', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                },
-                body: JSON.stringify(payload)
-            })
-            .then(response => {
-                if (response.ok) {
-                    formStatus.textContent = 'Message sent successfully!';
-                    formStatus.style.color = '#10b981'; // Success color
-                    contactForm.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                console.error('Error submitting form:', error);
-                formStatus.textContent = 'Oops! There was a problem submitting your form.';
-                formStatus.style.color = '#ef4444'; // Error color
-            })
-            .finally(() => {
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalBtnText;
-            });
-        };
-
-        if (typeof grecaptcha !== 'undefined') {
-            grecaptcha.ready(function() {
-                grecaptcha.execute('6Ldapj8pAAAAAPcYs_5MbsBwD3QGt02l4UTPRWQf', {action: 'submit'}).then(function(token) {
-                    data['g-recaptcha-response'] = token;
-                    sendData(data);
-                }).catch(function(err) {
-                    console.error('reCAPTCHA error:', err);
-                    sendData(data);
+        // Replace 'YOUR_FORM_ID' below with your actual Formspree ID
+        // Example: https://formspree.io/f/xabcdefg
+        fetch('https://formspree.io/f/mykbkqaz', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (response.ok) {
+                formStatus.textContent = 'Message sent successfully!';
+                formStatus.style.color = '#10b981'; // Success color
+                contactForm.reset();
+            } else {
+                return response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        throw new Error(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
                 });
-            });
-        } else {
-            sendData(data);
-        }
+            }
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+            formStatus.textContent = error.message !== 'Form submission failed' ? error.message : 'Oops! There was a problem submitting your form.';
+            formStatus.style.color = '#ef4444'; // Error color
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+        });
     });
 }
